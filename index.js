@@ -2,7 +2,6 @@ const { Client, Enums } = require('fnbr');
 const { readFile, writeFile } = require('fs').promises;
 const { get } = require('request-promise');
 const axios = require("axios");
-const KeepAlive = require('./epic');
 (async () => {
   //const currentLibVersion = JSON.parse(await readFile(require.resolve('fnbr').replace('index.js', 'package.json'))).version;
   //const latestVersion = (await get({ url: 'https://registry.npmjs.org/-/package/fnbr/dist-tags', json: true })).latest;
@@ -167,5 +166,4 @@ const KeepAlive = require('./epic');
   client.on('party:member:message', (m) => handleCommand(m, m.author));
 })();
 
-KeepAlive();
 //https://www.epicgames.com/id/api/redirect?clientId=3446cd72694c4a4485d81b77adbb2141&responseType=code
